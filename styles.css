@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212; /* Fundo escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza verticalmente */
+    gap: 100px; /* Espaçamento entre as imagens */
+    position: relative;
+    background: radial-gradient(circle at top left, rgba(255, 165, 0, 0.2), rgba(0, 0, 0, 0.8));
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 20px;
+    background: linear-gradient(45deg, rgba(255, 165, 0, 0.5), rgba(255, 87, 34, 0.5));
+    z-index: -1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.image-1,
+.image-2 {
+    width: 300px; /* Mantém o tamanho das imagens */
+    height: auto;
+    border-radius: 10px; /* Arredonda as bordas das imagens */
+}
+
+.image-1 {
+    box-shadow: 0 4px 20px rgba(255, 165, 0, 0.8); /* Sombra laranja mais suave */
+}
+
+.image-2 {
+    filter: drop-shadow(0 4px 20px rgba(255, 165, 0, 0.8)); /* Sombra laranja mais suave */
+}
